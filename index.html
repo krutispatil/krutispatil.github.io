@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Analyst Portfolio | Your Name</title>
+    <title>Data Analyst Portfolio | Kruti Patil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -500,6 +500,57 @@
             letter-spacing: 0.5px;
         }
 
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: linear-gradient(180deg, rgba(31, 31, 31, 0.98) 0%, rgba(20, 20, 20, 0.98) 100%);
+            border: 1px solid var(--medium-gray);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(229, 9, 20, 0.45);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+        }
+
+        .project-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: var(--netflix-red);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .project-card h3 {
+            font-size: 1.9rem;
+            color: var(--pure-white);
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card p {
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.98rem;
+        }
+
+        .project-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
         /* Skills Section - Tag style */
         .skills-container {
             display: flex;
@@ -729,7 +780,7 @@
                     </div>
                     <h3>Tableau</h3>
                     <p>Advanced visualizations with calculated fields, parameters, and dynamic storytelling features.</p>
-                    <a href="YOUR_TABLEAU_LINK_HERE" target="_blank" class="tool-link">
+                    <a href="https://public.tableau.com/app/profile/kruti.s.patil/vizzes" target="_blank" rel="noopener noreferrer" class="tool-link">
                         View Tableau Public <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
                     </a>
                 </div>
@@ -743,7 +794,7 @@
                     </div>
                     <h3>GitHub</h3>
                     <p>Data analysis projects, Python scripts, SQL queries, and machine learning notebooks.</p>
-                    <a href="YOUR_GITHUB_LINK_HERE" target="_blank" class="tool-link">
+                    <a href="https://github.com/krutispatil" target="_blank" rel="noopener noreferrer" class="tool-link">
                         View Repositories <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
                     </a>
                 </div>
@@ -757,7 +808,7 @@
                     </div>
                     <h3>LinkedIn</h3>
                     <p>Professional profile, recommendations, and data analytics community engagement.</p>
-                    <a href="YOUR_LINKEDIN_LINK_HERE" target="_blank" class="tool-link">
+                    <a href="https://www.linkedin.com/in/kruti-s-patil-b2b6831b0/" target="_blank" rel="noopener noreferrer" class="tool-link">
                         Connect on LinkedIn <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
                     </a>
                 </div>
@@ -849,28 +900,61 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
+        <div class="section-header">
+            <h2>
+                <i data-lucide="folder-kanban" style="color: var(--netflix-red);"></i>
+                Featured Projects
+            </h2>
+            <p>A growing collection of hands-on analytics work, dashboards, and apps built to solve real problems.</p>
+        </div>
+
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-meta">
+                    <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i>
+                    Recently launched
+                </div>
+                <h3>Podcast Business Intelligence Platform</h3>
+                <p>A live Streamlit analytics project focused on podcast business intelligence, giving visitors a direct way to explore the product and see your data work in action.</p>
+                <div>
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Analytics</span>
+                </div>
+                <div class="project-actions" style="margin-top: 1.5rem;">
+                    <a href="https://c7s6hqcvrd53t6mojikztn.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i data-lucide="external-link"></i>
+                        Launch Project
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="fade-in">
         <div class="contact">
             <h2>Let's Work Together</h2>
             <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
             
-            <a href="mailto:your.email@example.com" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">
+            <a href="mailto:krutispatil@gmail.com" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">
                 <i data-lucide="mail"></i>
                 Get In Touch
             </a>
 
             <div class="social-links">
-                <a href="YOUR_GITHUB_LINK_HERE" target="_blank" class="social-btn" title="GitHub">
+                <a href="https://github.com/krutispatil" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
                     <i data-lucide="github"></i>
                 </a>
-                <a href="YOUR_LINKEDIN_LINK_HERE" target="_blank" class="social-btn" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/kruti-s-patil-b2b6831b0/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
                     <i data-lucide="linkedin"></i>
                 </a>
-                <a href="YOUR_TABLEAU_LINK_HERE" target="_blank" class="social-btn" title="Tableau">
+                <a href="https://public.tableau.com/app/profile/kruti.s.patil/vizzes" target="_blank" rel="noopener noreferrer" class="social-btn" title="Tableau">
                     <i data-lucide="activity"></i>
                 </a>
-                <a href="mailto:your.email@example.com" class="social-btn" title="Email">
+                <a href="mailto:krutispatil@gmail.com" class="social-btn" title="Email">
                     <i data-lucide="mail"></i>
                 </a>
             </div>
@@ -879,7 +963,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
+        <p>&copy; 2026 Kruti Patil. All rights reserved.</p>
     </footer>
 
     <script>
