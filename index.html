@@ -612,6 +612,45 @@
             align-items: center;
         }
 
+        .experience-card {
+            background: linear-gradient(180deg, rgba(31, 31, 31, 0.98) 0%, rgba(20, 20, 20, 0.98) 100%);
+            border: 1px solid var(--medium-gray);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-header h3 {
+            font-size: 1.9rem;
+            color: var(--pure-white);
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-company {
+            color: var(--off-white);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .experience-role {
+            color: var(--light-gray);
+            font-size: 1rem;
+        }
+
+        .experience-body {
+            color: var(--off-white);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
         /* Skills Section - Tag style */
         .skills-container {
             display: flex;
@@ -821,6 +860,7 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#dashboards">Dashboards</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -1041,6 +1081,29 @@
                 </div>
             </article>
         </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="fade-in">
+        <div class="section-header">
+            <h2>
+                <i data-lucide="briefcase" style="color: var(--netflix-red);"></i>
+                Work Experience
+            </h2>
+            <p>Professional experience focused on dashboard quality, KPI validation, SQL-based verification, and business intelligence reporting.</p>
+        </div>
+
+        <article class="experience-card">
+            <div class="experience-header">
+                <div>
+                    <h3>Quality Associate - Business Intelligence and Data</h3>
+                    <div class="experience-company">SAP Labs India, Bangalore</div>
+                    <div class="experience-role">Dashboard testing, KPI validation, and BI quality assurance</div>
+                </div>
+            </div>
+
+            <p class="experience-body">At SAP Labs India, I validated end-to-end BI dashboards and analytical workflows built on SAP Analytics Cloud and SAP HANA for SAP Fieldglass, ensuring data integrity, KPI accuracy, and reliable reporting for global stakeholders. I executed advanced SQL queries, including CTEs, window functions, and subqueries, to verify metrics, underlying data logic, and chart-level outputs, helping reduce dashboard errors by 30%. My work also involved testing KPI definitions, filters, aggregations, and data refresh subscriptions to confirm consistent and timely reporting across live and scheduled data connections. In addition, I partnered with developers and cross-functional stakeholders in an Agile environment to investigate data discrepancies, triage defects in SAP Analytics Cloud models, and strengthen overall reporting accuracy through documented root cause analysis and corrective recommendations.</p>
+        </article>
     </section>
 
     <!-- Contact Section -->
