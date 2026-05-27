@@ -465,6 +465,7 @@
             overflow-x: auto;
             padding: 2rem 0;
             scrollbar-width: none;
+            scroll-snap-type: x proximity;
         }
 
         .showcase-row::-webkit-scrollbar {
@@ -483,6 +484,7 @@
             text-decoration: none;
             color: inherit;
             display: block;
+            scroll-snap-align: start;
         }
 
         .showcase-item:hover {
@@ -759,9 +761,33 @@
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            .hero {
+                min-height: auto;
+                padding-bottom: 5rem;
+            }
+
+            .hero-content {
+                max-width: 680px;
+            }
+
+            .tools-grid,
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
         @media (max-width: 768px) {
+            :root {
+                --nav-height: 72px;
+            }
+
             nav {
                 padding: 0 1.25rem;
+            }
+
+            .logo {
+                font-size: 1.65rem;
             }
 
             .nav-toggle {
@@ -804,23 +830,198 @@
             .nav-links a::after {
                 display: none;
             }
+
+            section {
+                padding: 4rem 1.25rem;
+            }
+
+            #dashboards {
+                padding-top: 4.5rem;
+            }
             
             .hero {
                 justify-content: center;
                 text-align: center;
+                align-items: flex-end;
+                min-height: auto;
+                padding: calc(var(--nav-height) + 2rem) 1.25rem 4rem;
                 background: linear-gradient(to top, var(--dark-black) 0%, rgba(0,0,0,0.7) 100%);
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-badge {
+                justify-content: center;
+                flex-wrap: wrap;
+                text-align: center;
+                font-size: 0.78rem;
+                margin-bottom: 1.25rem;
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: clamp(2.4rem, 15vw, 4rem);
+                letter-spacing: 1px;
+                margin-bottom: 1rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .cta-buttons {
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+                padding: 0.95rem 1.25rem;
+            }
+
+            .section-header {
+                margin-bottom: 2rem;
+            }
+
+            .section-header h2,
+            .showcase-header h2 {
+                font-size: 2rem;
+                line-height: 0.95;
+                gap: 0.6rem;
+            }
+
+            .section-header p,
+            .showcase-header p {
+                font-size: 1rem;
+                max-width: none;
             }
 
             .tools-grid {
                 grid-template-columns: 1fr;
             }
 
+            .tool-card-content,
+            .project-card,
+            .experience-card {
+                padding: 1.4rem;
+            }
+
+            .tool-card h3,
+            .project-card h3,
+            .experience-header h3 {
+                font-size: 1.65rem;
+            }
+
+            .project-actions {
+                width: 100%;
+            }
+
+            .project-actions .btn {
+                width: 100%;
+            }
+
+            .showcase {
+                margin-top: 3rem;
+            }
+
+            .showcase-row {
+                padding: 1.25rem 0 0.5rem;
+                margin-right: -1.25rem;
+                padding-right: 1.25rem;
+            }
+
             .showcase-item {
-                width: 280px;
+                width: min(82vw, 320px);
+            }
+
+            .showcase-item:hover,
+            .tool-card:hover,
+            .project-card:hover {
+                transform: none;
+            }
+
+            .showcase-img {
+                height: 180px;
+            }
+
+            .skills-container {
+                gap: 0.6rem;
+            }
+
+            .skill-tag {
+                padding: 0.65rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .experience-role,
+            .experience-company,
+            .experience-body {
+                font-size: 0.95rem;
+            }
+
+            .contact {
+                margin-top: 3rem;
+                padding: 3rem 1.25rem;
+            }
+
+            .contact h2 {
+                font-size: 2.35rem;
+            }
+
+            .contact p {
+                font-size: 1rem;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 0 1rem;
+            }
+
+            section {
+                padding: 3.5rem 1rem;
+            }
+
+            .hero {
+                padding: calc(var(--nav-height) + 1.75rem) 1rem 3.25rem;
+            }
+
+            .hero-badge {
+                padding: 0.45rem 0.8rem;
+            }
+
+            .section-header h2,
+            .showcase-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .tool-card-content,
+            .project-card,
+            .experience-card,
+            .contact {
+                padding: 1.2rem;
+            }
+
+            .showcase-item {
+                width: 86vw;
+            }
+
+            .showcase-content,
+            .tool-card-content {
+                padding: 1.2rem;
+            }
+
+            .social-btn {
+                width: 46px;
+                height: 46px;
             }
         }
 
